@@ -29,21 +29,17 @@ public class PrimeFactors {
             if(tab[i]==1)
             list.add(i);
         }
-        List<Integer> list2 = new LinkedList<Integer>();
-//        System.out.println(list);
-
-        int a = 0;
-
+        List<Integer> primeFactors = new LinkedList<Integer>();
+        int i = 0;
         while(number!=1)
         {
-            while(number%list.get(a)==0)
+            while(number%list.get(i)==0)
             {
-                number /= list.get(a);
-                list2.add(list.get(a));
+                number /= list.get(i);
+                primeFactors.add(list.get(i));
             }
-            a++;
+            i++;
         }
-
-        System.out.println(list2);
+        System.out.println(primeFactors);
     }
 }
