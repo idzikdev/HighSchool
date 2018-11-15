@@ -35,7 +35,6 @@ public class Qsort {
             System.out.println("Podaj liczbę nr "+(i+1));
             tablica[i] = scanner.nextInt();
         }
-        Collections.sort();
         System.out.println("Tablica przed posortowaniem:");
         for(int i=0; i<ile_liczb; i++)
             if (i==ile_liczb-1) System.out.println(tablica[i]);
