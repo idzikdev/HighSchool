@@ -1,0 +1,11 @@
+3,4,5
+1,1,1
+3,2,1
+
+0) klasa trojkat ma pola: a,b,c,pole(inicjalizowane przez konstruktor)
+1) zapakowac do listy same trójkąty
+2) wyświetlić trójkąt o najmniejszym polu (użyc komparator)
+3) obliczyc ile w 1) jest trójkątów prostokątnych
+
+5 - musi być na plikach
+4 - bez plików
