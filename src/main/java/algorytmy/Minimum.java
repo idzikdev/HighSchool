@@ -1,4 +1,4 @@
-package lekcje;
+package algorytmy;
 
 public class Minimum {
     public static int minimum(int [] tab){

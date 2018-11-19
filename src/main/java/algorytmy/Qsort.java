@@ -1,4 +1,4 @@
-package lekcje;
+package algorytmy;
 
 import java.util.Collections;
 import java.util.Scanner;

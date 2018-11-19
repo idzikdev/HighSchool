@@ -1,4 +1,4 @@
-package lekcje;
+package algorytmy;
 
 public class Hanoi {
 

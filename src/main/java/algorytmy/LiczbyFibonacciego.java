@@ -1,4 +1,4 @@
-package lekcje;
+package algorytmy;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
