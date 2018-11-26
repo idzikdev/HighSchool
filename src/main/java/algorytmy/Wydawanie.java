@@ -62,7 +62,6 @@ public class Wydawanie {
                 suma = suma - 1;
                 suma1=suma1-1;
                 continue;
-
             }
         }
     }
