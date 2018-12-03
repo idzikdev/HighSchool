@@ -10,7 +10,7 @@ import java.util.Map;
 public class Zadanie3 {
     public static void main(String[] args) throws IOException {
         Map<Character,Integer> mapa=new HashMap<>();
-        List<String> lista= Files.readAllLines(Paths.get("sprawdzian3.txt"));
+        List<String> lista= Files.readAllLines(Paths.get("src/main/java/sprawdziany/sprawdzian3.txt"));
         int sumaCyfr=0;
         for (String el:lista
              ) {

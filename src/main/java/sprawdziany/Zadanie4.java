@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Zadanie4 {
     public static void main(String[] args) throws IOException {
-        List<String> list= Files.readAllLines(Paths.get("sprawdzian4.txt"));
+        List<String> list= Files.readAllLines(Paths.get("src/main/java/sprawdziany/sprawdzian4.txt"));
         double liczba=0;
         for (String el:list
              ) {

@@ -8,7 +8,7 @@ import java.util.*;
 public class Zadanie1 {
     public static void main(String[] args) throws IOException {
         Set<Integer> set=new HashSet<Integer>();
-        List<String> list= Files.readAllLines(Paths.get("sprawdzian1.txt"));
+        List<String> list= Files.readAllLines(Paths.get("src/main/java/sprawdziany/sprawdzian1.txt"));
         for (String el:list
              ) {
            String [] string=el.split(",");

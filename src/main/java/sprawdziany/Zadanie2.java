@@ -8,7 +8,7 @@ import java.util.*;
 public class Zadanie2 {
     public static void main(String[] args) throws IOException {
         Set<String> set=new LinkedHashSet<>();
-        List<String> list= Files.readAllLines(Paths.get("sprawdzian2.txt"));
+        List<String> list= Files.readAllLines(Paths.get("src/main/java/sprawdziany/sprawdzian2.txt"));
         List<Integer> lista=new ArrayList<Integer>();
         int ileLiczb=0;
         for (String el:list

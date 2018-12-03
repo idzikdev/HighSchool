@@ -1,4 +1,0 @@
-1. Mając dany zbiór wypisać wszystkie liczby naturalne trzycyfrowe podzielne przez 3.
-2. Mając dany zbiór stringów wypisać ile jest liczb oraz sprawdzić czy istnieje ciag czterech kolejnych liczb naturalnych
-3. Mając daną tablicę stringów znajdź spółgłoskę, która występuje najczęściej oraz oblicz sumę wszsytkich liczb.
-4. Mając dane 8 bitów w postaci stringów zamień liczbę na liczbę dziesiętną ale w odwróconej kolejności bitów.
