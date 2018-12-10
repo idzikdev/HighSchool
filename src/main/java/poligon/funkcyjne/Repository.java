@@ -1,12 +1,9 @@
-package poligon;
+package poligon.funkcyjne;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import poligon.funkcyjne.Worker;
 
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -23,7 +20,7 @@ public class Repository {
 
     public Repository() throws IOException {
         workerList=new ArrayList<>();
-        List<String> stringList= Files.readAllLines(Paths.get("src/main/java/poligon/mock_data.csv"));
+        List<String> stringList= Files.readAllLines(Paths.get("src/main/java/poligon/funkcyjne/mock_data.csv"));
         for (String el:stringList
              ) {
             String [] els=el.split(",");

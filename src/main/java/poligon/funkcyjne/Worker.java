@@ -1,4 +1,4 @@
-package poligon;
+package poligon.funkcyjne;
 
 import lombok.*;
 

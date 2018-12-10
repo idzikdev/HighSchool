@@ -1,4 +1,7 @@
-package poligon;
+package poligon.funkcyjne;
+
+import poligon.funkcyjne.Repository;
+import poligon.funkcyjne.Worker;
 
 import java.io.IOException;
 import java.util.ArrayList;
