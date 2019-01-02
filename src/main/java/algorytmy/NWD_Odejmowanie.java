@@ -13,9 +13,8 @@ public class NWD_Odejmowanie {
         int p=b;
         while(a!=b){
             if (a>b) a=a-b;
-            else b=b-a;
+            else if (b>a) b=b-a;
         }
         System.out.println("NWD("+l+","+p+")="+a);
-
     }
 }
