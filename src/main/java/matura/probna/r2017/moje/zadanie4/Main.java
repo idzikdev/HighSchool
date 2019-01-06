@@ -62,7 +62,7 @@ public class Main {
         System.out.println(okregiStyczne.size());
         // Zadanie 4.3
         List<Trojkat> listOfTrojkat=new ArrayList<>();
-        for (int i = 0; i < listOfPunkty.size()-3; i++) {
+        for (int i = 0; i < listOfPunkty.size()-1; i++) {
             listOfTrojkat.add(new Trojkat(listOfPunkty.get(i),listOfPunkty.get(i+1),new Punkt(0,0)));
         }
         double pole=0;
@@ -70,6 +70,8 @@ public class Main {
              ) {
             pole=pole+t.pole();
         }
+        Trojkat ostatni=new Trojkat(listOfPunkty.get(listOfPunkty.size()-1),listOfPunkty.get(0),new Punkt(0,0));
+        pole=pole+ostatni.pole();
         wyniki3.print(pole);
         wyniki3.close();
         System.out.println("Zadanie 4.3");
