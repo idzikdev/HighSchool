@@ -2,7 +2,7 @@ package lekcje;
 
 import java.util.Scanner;
 
-//Program oblicza ilość @,% oraz # we wprowadzonym tekście.
+//BigIntegerMnozenie oblicza ilość @,% oraz # we wprowadzonym tekście.
 public class Znaki {
   public static int [] metoda (String string){
    int [] tab=new int[3];
