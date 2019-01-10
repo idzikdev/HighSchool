@@ -32,17 +32,17 @@ public class Main {
         List<String> plik=Files.readAllLines(Paths.get("src/main/java/matura/probna/r2017/dane/rejestrator.txt"));
         List<Czas> czasList=new ArrayList<>();
         PrintWriter wyniki5=new PrintWriter("src/main/java/matura/probna/r2017/moje/wyniki5.txt");
-        for (String s:plik
+               for (String s:plik
              ) {
            czasList.add(toCzas(s));
         }
         // Zadanie 5.1
         System.out.println("Zadanie 5.1");
         System.out.println("Zarejestrowane czasy");
-        for (Czas czas:czasList
-             ) {
-            System.out.println(czas);
-        }
+//        for (Czas czas:czasList
+//             ) {
+//            System.out.println(czas);
+//        }
         wyniki5.println(czasList.get(1110));
         wyniki5.println(czasList.get(2221));
         wyniki5.println(czasList.get(3332));

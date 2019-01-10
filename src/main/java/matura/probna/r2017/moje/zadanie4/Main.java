@@ -72,7 +72,7 @@ public class Main {
         }
         Trojkat ostatni=new Trojkat(listOfPunkty.get(listOfPunkty.size()-1),listOfPunkty.get(0),new Punkt(0,0));
         pole=pole+ostatni.pole();
-        wyniki3.print(pole);
+        wyniki3.print((int)pole);
         wyniki3.close();
         System.out.println("Zadanie 4.3");
         System.out.println((int)pole);
