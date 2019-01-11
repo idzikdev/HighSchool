@@ -42,11 +42,10 @@ public class Okrag implements Comparable<Okrag>{
 
     @Override
     public int compareTo(Okrag o) {
-        if (this.getX()<o.getX()) return -1;
-        else if (this.getX()>o.getX()) return 1;
-        else if (this.getY()<o.getY()) return -1;
-        else if (this.getY()>o.getY()) return 1;
-        return 0;
+        if (this.getX()==o.getX()) {
+            return (int)(this.getY()-o.getY());
+        }
+        return (int)(this.getX()-o.getX());
     }
     public boolean czyStyczny(){
         if (r==Math.abs(y)) return true;
