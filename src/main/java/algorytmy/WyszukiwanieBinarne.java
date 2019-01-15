@@ -1,13 +1,15 @@
 package algorytmy;
 
 public class WyszukiwanieBinarne {
-    static int [] arr = {1,3,4,5,6,8,9,10,15,22,34};
-    static int x=22;
+    static int [] arr =new int[1000];
+    static int x=222;
+    static int counter=0;
     public static int wyszukaj(int l,int p){
         int n = (l+p)/2;
-        System.out.println("l =" + l);
-        System.out.println("p =" + p);
-        System.out.println("środkowy el =" + arr[n]);
+        counter++;
+//        System.out.println("l =" + l);
+//        System.out.println("p =" + p);
+//        System.out.println("środkowy el =" + arr[n]);
         if(p<l){
             return -1;
         }
@@ -21,9 +23,12 @@ public class WyszukiwanieBinarne {
         else{
             return wyszukaj(n+1,p);
         }
-
     }
     public static void main(String[] args) {
-        System.out.println(wyszukaj(0,arr.length-1));
+        for (int i = 0; i < arr.length; i++) {
+            arr[i]=i*2;
+        }
+        System.out.println("Szukany element "+x+" jest na pozycji "+wyszukaj(0,arr.length-1));
+        System.out.println("Srodek tablicy był obliczany "+counter+" razy");
     }
 }
