@@ -11,7 +11,6 @@ public class Kolejka {
         queue.offer(5);
         queue.offer(12);
         queue.offer(5);
-        System.out.println(queue.poll());
         while (!queue.isEmpty()){
             System.out.println(queue.poll());
         }
