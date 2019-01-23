@@ -2,7 +2,7 @@ package klasydrugie;
 
 import java.util.*;
 
-public class Lista {
+public class ListaTablicowa {
     public static void main(String[] args) {
         List<Integer> lista=new ArrayList<>(Arrays.asList(4,5,13));
         lista.add(10);
@@ -15,7 +15,7 @@ public class Lista {
             System.out.println(it.next());
         }
         for (Integer el:lista
-             ) {
+        ) {
             System.out.println(el);
         }
     }
