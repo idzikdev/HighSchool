@@ -51,7 +51,7 @@ public class SortowaniePozycyjne {
         // cyfra dziesiatek
         for (Integer el:result
         ) {
-            kubelki.get(Integer.valueOf(String.valueOf(el).charAt(0)+"")).add(el);
+            kubelki.get(Integer.valueOf(String.valueOf(el).charAt(1)+"")).add(el);
         }
         result.clear();
         // pobrac z kubełkow
