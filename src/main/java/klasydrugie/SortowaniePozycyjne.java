@@ -32,17 +32,53 @@ public class SortowaniePozycyjne {
         kubelki.add(kubelek8);
         kubelki.add(kubelek9);
 
-        // cyfra jedności - kubełek 0
+        // cyfra jedności
         for (Integer el:result
              ) {
             kubelki.get(el%10).add(el);
         }
         result.clear();
         // pobrac z kubełkow
-       .........................
          // wszystkie kubelki
         for (int i = 0; i < kubelki.size(); i++) {
-            System.out.println(kubelki.get(i));
+            for (Integer el:kubelki.get(i)
+                 ) {
+             result.add(el);
+            }
+            kubelki.get(i).clear();
         }
+        System.out.println("STAN "+result);
+        // cyfra dziesiatek
+        for (Integer el:result
+        ) {
+            kubelki.get(Integer.valueOf(String.valueOf(el).charAt(0)+"")).add(el);
+        }
+        result.clear();
+        // pobrac z kubełkow
+        // wszystkie kubelki
+        for (int i = 0; i < kubelki.size(); i++) {
+            for (Integer el:kubelki.get(i)
+            ) {
+                result.add(el);
+            }
+            kubelki.get(i).clear();
+        }
+        System.out.println("STAN "+result);
+        // cyfra setek
+        for (Integer el:result
+        ) {
+            kubelki.get(Integer.valueOf(String.valueOf(el).charAt(0)+"")).add(el);
+        }
+        result.clear();
+        // pobrac z kubełkow
+        // wszystkie kubelki
+        for (int i = 0; i < kubelki.size(); i++) {
+            for (Integer el:kubelki.get(i)
+            ) {
+                result.add(el);
+            }
+            kubelki.get(i).clear();
+        }
+        System.out.println("STAN "+result);
     }
 }
