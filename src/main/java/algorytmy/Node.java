@@ -1,10 +1,13 @@
 package algorytmy;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
-@Data
+@ToString
 public class Node<T> {
     private List<Node<T>> children = new ArrayList<Node<T>>();
     private Node<T> parent = null;
@@ -59,21 +62,14 @@ public class Node<T> {
         this.parent = null;
     }
 
+    public Node<T> getParent(){
+        return parent;
+    }
+
     public static void main(String[] args) {
-        Node<String> parentNode = new Node<String>("Parent");
-        Node<String> childNode1 = new Node<String>("Child 1", parentNode);
-        Node<String> childNode2 = new Node<String>("Child 2",parentNode);
-        System.out.println(childNode1.getParent());
-
-       // childNode2.setParent(parentNode);
-        System.out.println(parentNode.getData());
-        System.out.println(parentNode.getChildren().size());
-        for (int i = 0; i <parentNode.getChildren().size() ; i++) {
-            System.out.println(parentNode.getChildren().get(i));
-        }
-
-
-
-
+        Node<String> root= new Node<String>("Parent");
+        Node<String> childNode1 = new Node<String>("Child 1",root);
+        Node<String> childNode2 = new Node<String>("Child 2",root);
+        System.out.println(childNode1);
     }
 }
