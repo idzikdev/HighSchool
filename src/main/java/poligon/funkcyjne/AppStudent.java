@@ -3,12 +3,11 @@ package poligon.funkcyjne;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Predicate;
 
 public class AppStudent {
-    public static void meet (List<Student> lista, Predicate<Student> predicate) {
-
-        List<Student> result = new ArrayList<>();
+     public static void meet (List<Student> lista, Predicate<Student> predicate) {
 
         for (Student s : lista
         ) {
@@ -23,7 +22,8 @@ public class AppStudent {
     public static void show(List<Student>list, String name){
         for (Student st:list
              ) {
-            if (st.getName().equals(name)) System.out.println(st);
+            if (st.getName().equals(name))
+                System.out.println(st);
         }
     }
 
@@ -44,11 +44,16 @@ public class AppStudent {
                 .age(23)
                 .build();
         List<Student> list=new ArrayList<>(Arrays.asList(s1,s2,s3));
+//        show(list,"Kasia");
 
-        Predicate<Student> predicateKasia= student -> student.getName().equals("Kasia");
         Predicate<Student> predicateWiek= student -> student.getAge()>30;
-
+        Predicate<Student> predicateKasia= student -> "Kasia".equals(student.getName());
         meet(list,predicateKasia.and(predicateWiek));
+
+
+
+//
+
 
 
 
