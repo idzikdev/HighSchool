@@ -4,9 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 @NoArgsConstructor
 
@@ -78,7 +84,7 @@ public class Student {
         return result;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Student s1 = new Student("Aacper", "Zajac", 18);
         Student s2 = new Student("Bacper", "Bugala", 16);
         Student s3 = new Student("Carolina", "Szyszkoo", 17);
@@ -151,19 +157,23 @@ public class Student {
         //Zadanie 6
         //Posortuj studentów malejąco po wieku.
         list.stream()
-                .sorted((o1, o2) -> o1.getAge() - o2.getAge() * (-1))
-                .forEach(s -> System.out.println(s));
+                .sorted((o1, o2) -> o1.getAge()-o2.getAge()*(-1))
+                .forEach(student -> System.out.println(student));
+
 
         list.stream()
                 .sorted((a, b) -> Integer.compare(a.getAge(), b.getAge()) * (-1))
                 .forEach(student -> System.out.println(student));
 
 
+
         System.out.println("Zadanie 7");
         //Podaj ilu jest studentów powtarzajacych się
-        System.out.println(list.size() - list.stream()
+        System.out.println(
+                list.size()-list.stream()
                 .distinct()
                 .count());
+
 
 
         System.out.println("Zadanie 8");
@@ -172,30 +182,31 @@ public class Student {
         //  a wiek to wiek podzielony przez 10
         list.stream()
                 .map(student -> new Animal(
-                        student.getName() + student.getSurname(),
-                        student.getAge() / 10
+                        student.getName()+student.getSurname(),
+                        student.getAge()/10
                 ))
-                .forEach(animal -> System.out.println(animal));
+                .forEach(System.out::println);
 
 
-        System.out.println("Zadanie 9");
+
+         System.out.println("Zadanie 9");
         // Zamień wiek ludzi na psie lata n*6-2,
         // a następnie wyświetl tych ludzi,
         // których wiek po zamianie przekracza 50
         list.stream()
-                .map(student -> new Student(
-                        student.getName(),
-                        student.getSurname(),
-                        student.getAge() * 6 - 2
+                .map(st->new Student(
+                        st.getName(),
+                        st.getSurname(),
+                        st.getAge()*6-2
                 ))
-                .filter(student -> student.getAge() > 50)
-                .forEach(student -> System.out.println(student));
+                .filter(st->st.getAge()>50)
+                .forEach(System.out::println);
+
 
 
         System.out.println("Zadanie 10");
         //Zgrupuj ludzi,
-        //których długośc imienia i nazwiska jest taka sama
-
+        //których długość imienia i nazwiska jest taka sama
         Map<Integer, List<Student>> lista = list.stream()
                 .collect(Collectors.groupingBy(st -> st.getName().length() + st.getSurname().length()));
 
@@ -204,15 +215,28 @@ public class Student {
             System.out.println("Długość " + element.getKey());
             System.out.println("mają studenci " + element.getValue());
         }
-        System.out.println("Zadanie 10");
+
+
+        System.out.println("Zadanie 11");
         // Zgrupuj wszystkich ludzi po nazwiskach.
         // Wyświetl najpopularniejsze nazwisko
 
-        List<String> listaNawisk = list.stream()
-                .map(s -> s.getSurname())
+
+
+
+        List<String> listaNazwisk = list.stream()
+                .map(Student::getSurname)
                 .collect(Collectors.toList());
-        System.out.println(listaNawisk);
-        //TODO max
+        System.out.println(listaNazwisk);
+
+        //TODO frequency
+
+
+        //dodatkowe
+        //zapisać do pliku liczby parzyste 2,1000
+        IntStream.rangeClosed(2,1000)
+                .filter(i->i%2==0)
+                .sum();
 
 
 
