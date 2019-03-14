@@ -1,7 +1,9 @@
 package klasytrzecie;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Strumienie {
@@ -34,5 +36,9 @@ public class Strumienie {
         ) {
             if (el.getValue() == minValue) System.out.println(el.getKey());
         }
+
+//        Map<String, Integer> map=Stream.of("1","2","3","4","5","0","6")
+//                .collect(Collectors.toMap(s->s,s->s.length()));
+//        map.forEach((x,y)-> System.out.println(x+" "+y));
     }
 }
