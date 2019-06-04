@@ -1,0 +1,10 @@
+S1. (12,90) ------- VS ------- S2. (90,87)
+Walka się rozpoczyna
+S1. (12,90) ------- VS ------- S2. (90,77)
+S1. (12,86) ------- VS ------- S2. (90,68)
+S1. (12,43) ------- VS ------- S2. (90,60)
+S1. (12,0) ------- VS ------- S2. (90,60)
+Wygrał Soldier 2
+Soldier 1. Attack 12 Obrona 0
+Soldier 2. Attack 90 Obrona 60
+Walka się zakończyła

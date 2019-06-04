@@ -7,8 +7,8 @@ public class Soldier {
     private String surname;
     private String nationality;
     private int age;
-    private int stamina;
-    private int damage;
+    public int stamina;
+    public int damage;
 
     public Soldier(String name, String surname, String nationality, int age, int stamina, int damage) {
         this.name = name;
