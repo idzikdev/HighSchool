@@ -9,10 +9,10 @@ public class TestSoldier {
         PrintWriter file = new PrintWriter("fight.txt");
         Soldier soldier1 = new Soldier("Jan",
                 "Kowalski", "Polish",
-                31, 90, 12);
+                31, 90, 90);
 
         Soldier soldier2 = new Soldier("Jacek", "Placek", "Polish"
-                , 30, 87, 90);
+                , 30, 12, 88);
         Random rnd = new Random();
         int rndDamage = 0;
         int rndStamina = 0;
